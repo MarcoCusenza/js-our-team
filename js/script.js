@@ -34,12 +34,22 @@ const team = [
         "role": "Graphic Designer",
         "img": "img/barbara-ramos-graphic-designer.jpg",
     },
-
 ];
 
+//PROGRAMMA
+for (let i = 0; i < team.length; i++) {
+    createCard(i);
+}
+// FINE PROGRAMMA
+
+
+
+
+//FUNZIONI
 function createCard(i) {
     const person = team[i];
-    document.querySelector("team-container").innerHTML += `
+    console.log(team[i]);
+    document.querySelector(".team-container").innerHTML += `
     <div class="team-card">
         <div class="card-image">
             <img src="${person.img}" alt="${person.name}"/>
@@ -51,3 +61,4 @@ function createCard(i) {
     </div>
     `
 }
+//FINE FUNZIONI
