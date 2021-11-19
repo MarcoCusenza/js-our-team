@@ -33,14 +33,18 @@
     <div class="container">
       <h2 class="section-title">Add a new member</h2>
       <div class="form-container">
+
         <label for="name">Name </label>
         <input type="text" id="name" />
-        <label for="role">Role </label>
 
+        <label for="role">Role </label>
         <input type="text" id="role" />
-        <label for="name">Image </label>
+
+        <label for="name">Image <br>ATTENZIONE: inserisci solo il nome dell'immagine e l'estensione. <br>ES:
+          scott-estrada-developer.jpg</label>
         <input type="text" id="image" />
-        <button type="button" id="addMemberButton">Add</button>
+
+        <button type="button" onClick="window.location.reload();" id="addMemberButton">Add</button>
       </div>
     </div>
   </section>
