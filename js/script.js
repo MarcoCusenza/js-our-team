@@ -40,18 +40,16 @@ const team = [
 for (let i = 0; i < team.length; i++) {
     createCard(i);
 }
-const data = getData();
-document.getElementById("addMemberButton").addEventListener("click", data);
-for (let i = 0; i < team.length; i++) {
-    createCard(i);
-}
+document.getElementById("addMemberButton").addEventListener("click", function () {
+    getData();
+    createCard(team.length - 1);
+});
 // FINE PROGRAMMA
 
 
 //FUNZIONI
-function createCard(i) {
+function createCard(i) { //stampa una carta a schermo
     const person = team[i];
-    console.log(team[i]);
     document.querySelector(".team-container").innerHTML += `
     <div class="team-card">
         <div class="card-image">
@@ -65,7 +63,7 @@ function createCard(i) {
     `
 }
 
-function getData() {
+function getData() { //prende i dati dall'input e pusha nell'array
     const name = document.getElementById("name").value;
     const role = document.getElementById("role").value;
     const img = document.getElementById("image").value;
@@ -74,8 +72,6 @@ function getData() {
         "role": role,
         "img": `img/${img}`,
     };
-    console.log(obj);
     team.push(obj);
-    document.querySelector(".team-container").innerHTML = '';
 }
 //FINE FUNZIONI
